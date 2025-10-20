@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ruby</title>
+  <style>
+    @font-face {
+      font-family: 'Paperlogy';
+      src: url('Paperlogy-5Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Paperlogy', sans-serif;
+      overflow-y: auto;
+      background: linear-gradient(to top, black 0%, rgba(24, 38, 65, 1) 30%, rgba(24, 38, 65, 1) 100%);
+      color: white;
+    }
+
+    /* Intro */
+    .intro {
+      position: fixed;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 165px;         
+      animation: fadeOut 1s ease 2.5s forwards;
+      z-index: 10;
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+
+    .logo-container img {
+      width: 45%;
+      display: block;
+      margin: 0 auto 50px;
+      object-fit: contain;
+    }
+
+    .title {
+      font-size: 3.3rem;           
+      font-weight: 700;
+      text-align: center;
+      text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+      margin-bottom: 30px;
+    }
+
+    .subtitle {
+      font-size: 1.3rem;
+      opacity: 0.8;
+      margin-bottom: 80px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    main {
+      opacity: 0;
+      animation: fadeIn 1s ease 3.5s forwards;
+      text-align: center;
+      width: 900px;
+      margin: 200px auto 0 auto;
+      line-height: 1.7;
+    }
+
+    @keyframes fadeIn {
+      from { opacity:0; transform: translateY(30px);}
+      to { opacity:1; transform: translateY(0);}
+    }
+
+    section {
+      text-align: center;
+      padding: 80px 20px;
+      margin: 0 auto 300px auto;
+      transition: background 1s ease;
+    }
+
+    /* Fade-in only for 패스트패션 3 images */
+    .fade-item {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 50px 0;
+      font-size: 1rem;
+      opacity: 0.7;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Intro -->
+  <div class="intro">
+    <div class="logo-container"><img src="logos.png"></div>
+    <div class="title">싸다고 다 좋은걸까?</div>
+    <div class="subtitle">테무·알리 열풍의 ‘이면’</div>
+  </div>
+
+  <!-- Main -->
+  <main>
+    <img src="999won.png" style="width:70%; border-radius:15px;">
+    <h3>닌텐도를 999원에 판다는 믿기 힘든 이 광고는</h3>
+    <p>바로 중국 쇼핑몰 ‘테무’의 광고에요.</p>
+    <p>테무는 이렇게 파격적인 광고로 이용자들을 끌어모았어요.</p>
+  </main>
+
+  <!-- Sections -->
+  <section>
+    <div class="row">
+      <h2>파격적인 광고 덕분일까요?</h2>
+      <img src="1.png" style="width:40%; border-radius:15px;">
+      <p>2024년 테무·알리익스프레스 한국 이용자 수가 무려 1,400만 명이에요.</p>
+    </div>
+  </section>
+
+  <section class="why-section">
+    <div class="row">
+      <p>대한민국 국민의 5분의 1.</p>
+      <h2 style="font-size:60px;">WHY?</h2>
+      <p>테무와 알리가 폭발적으로 성장할 수 있었던 이유는?</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2>그 이유는 바로 압도적으로 저렴한 가격이에요.</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <p>테무의 슬로건</p>
+      <h2>‘Shop like a Billionaire’</h2>
+      <img src="3.png" style="width:30%; border-radius:15px;">
+      <p>테무에 들어가면 억만장자처럼 쇼핑하는 우리, 과연 그 이면에는 어떤 문제들이 있을까요?</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2 style="font-size:60px;">1.섬유 폐기물</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2>테무, 알리에서 판매되는 옷들은 저가 합성섬유로 만들어졌어요.</h2>
+      <img src="4.png" style="width:50%; margin-top:50px;">
+      <p>→ 천연섬유와 달리 합성섬유는 분해하는데 200년 이상 걸립니다.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2 style="font-size:60px;">#패스트 패션</h2>
+      <div class="image-row" style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:50px;">
+        <img src="패스트패션1.png" class="fade-item" style="width:30%; border-radius:15px; transition-delay:0s;">
+        <img src="패스트패션2.png" class="fade-item" style="width:30%; border-radius:15px; transition-delay:0.3s;">
+        <img src="패스트패션3.png" class="fade-item" style="width:30%; border-radius:15px; transition-delay:0.6s;">
+      </div>
+      <p>또, 테무와 알리를 통해 싸게 산 옷들은 쉽게 버려졌어요.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2>결과적으로 전세계에서는, 약 9200만톤의 의류가 매년 폐기되고 있어요.</h2>
+      <img src="5.png" style="width:40%; border-radius:25px; margin-top:50px;">
+      <p style="font-size:10px;">출처: “Towards Zero Waste in Fashion and Textiles” 보고서</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2>그럼,</h2>
+      <p>패스트 패션으로 인한 환경오염을 어떻게 예방할 수 있을까요?</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <img src="6.png" style="width:40%; margin-top:50px;">
+      <p>앞으로는 위 5가지 체크리스트를 생각하며 소비해보아요!</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <h2>이렇게 싸다고 무분별하게 쇼핑하면 결국 우리에게 돌아옵니다.</h2>
+    </div>
+  </section>
+
+  <section>
+    <div class="row">
+      <p>앞으로는 가격뿐만이 아닌</p>
+      <h2>그 이면까지 생각하는 현명한 소비를 해보아요.</h2>
+    </div>
+  </section>
+
+  <footer>@ryusooaln</footer>
+
+  <script>
+    const intro = document.querySelector('.intro');
+    intro.addEventListener('animationend', () => { intro.style.display='none'; });
+    const items = document.querySelectorAll('.fade-item');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.3 });
+    items.forEach(item => observer.observe(item));
+
+   
+    const whySection = document.querySelector('.why-section');
+    const whyObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.background='orange';
+          entry.target.style.color='black';
+        } else {
+          entry.target.style.background='';
+          entry.target.style.color='white';
+        }
+      });
+    }, { threshold: 0.3 });
+    whyObserver.observe(whySection);
+  </script>
+</body>
+</html>
